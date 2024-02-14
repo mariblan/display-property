@@ -20,7 +20,7 @@ First, we are going to work with the `block`, `inline-block` and `inline` values
 
 Something that is also important, is that the display is applied to the element that we want to make display inline with others or on the next line.
 
-With that said, lets start aplying some of this displays to our navigatio bar:
+With that said, lets start by applying the `inline` display to our navigatio bar:
 
     - Open now the index.html file and look at the code inside the <header> element.
     You can see that there is a <nav> element with an <span> and another one with three <a> tags. <nav> elements have as a default the `block` display, so you will see how in the browser, the content inside each <nav> is in a column disposition.
@@ -56,6 +56,10 @@ With that said, lets start aplying some of this displays to our navigatio bar:
     - Add `padding: 290px;` to the empty ruleset of class selector .nav-left. This is going to help the elements to have the most typical layout for navigation bars with two elements.
 
     - And finalize everzthing by taking away the styling of the <a> tags. Add ` text-decoration: none;` and `color: black;` 
+
+
+
+Dipslay `Block`
 
 
     - which makes the text stuck to the top and left side. Add `vertical-alignment: middle;`, `height: 80px;` and `padding: 10px;` to the ruleset of the <nav> elements.
