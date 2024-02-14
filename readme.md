@@ -1,26 +1,13 @@
-Step 1 - display:
-The display property of css specifies how the element itself, or its children elements, are going to layout on the page.
-There are 8 types of displays, and each ones has a different behavior, so lets use the navigation bar on index.html to tests them.
+Inline display:
 
-First, we are going to work with the `block`, `inline-block` and `inline` values. Read carefully the explanation of each element:
-
-    `block` - The block property is the default behavior for most elements. The elements with this type of display will:
-        - Start on a new line from the previous element.
-        - Take the whole with of the viewport.
-        - Be as hight as its content. If there is no content inside, they will have no hight and will not display.
-        - Be able to add paddings and margins vertically.
+In this activity we are going to learn how to use the `inline` display. Read carefully the explanation of its characteristics:
 
     `inline` - The inline property is the default behavior of some text elements (e.g. <a>, <i>, <b>, <em> and <span>). The elements with this type of display will:
         - Start on the same line of other inline elements next to them.
         - Not be able to change their with or height from the default one, which will be as hight as the content.
+        - Not give a layout to its children elements, only to itself.
 
-    `inline-block` - The inline-block property combines the behavior of the both displays. The elements with this type of display will:
-        - Stack horizontally as the inline elements.
-        - Be able to change their with and height as the block.
-
-Something that is also important, is that the display is applied to the element that we want to make display inline with others or on the next line.
-
-With that said, lets start by applying the `inline` display to our navigatio bar:
+Now that we know how the `inline` display works, let's start styling the navigation bar on the page indes.html, with the help of our styles.css.
 
     - Open now the index.html file and look at the code inside the <header> element.
     You can see that there is a <nav> element with an <span> and another one with three <a> tags. <nav> elements have as a default the `block` display, so you will see how in the browser, the content inside each <nav> is in a column disposition.
@@ -55,32 +42,4 @@ With that said, lets start by applying the `inline` display to our navigatio bar
 
     - Add `padding: 290px;` to the empty ruleset of class selector .nav-left. This is going to help the elements to have the most typical layout for navigation bars with two elements.
 
-    - And finalize everzthing by taking away the styling of the <a> tags. Add ` text-decoration: none;` and `color: black;` 
-
-
-
-Dipslay `Block`
-
-
-    - which makes the text stuck to the top and left side. Add `vertical-alignment: middle;`, `height: 80px;` and `padding: 10px;` to the ruleset of the <nav> elements.
-
-
-
-    - The content of the <hav> has aligned itself to the middle of the container and, but the height remained unchanged and the padding hasn't applid to the top and bottom. That is because inline elements can't change their height or with, and can only manipulate the horizontal whitespace, but not the vertical (padding-top, paddint-bottom, margin-top, margin-bottom).
-    For the height and padding property to apply, change the display of the <nav> to `display: inline-block;` instead.
-
-    - Wait, now the <nav> has change its height, but the <img> and the <a> elements are not aligning correctly anymore. Try adding `vertical-alignment: middle;` to both elements' rulesets.
-
-    - Both the <img> and the <a> elements are aligning vertically, but only inside their own line height that is preset by the size of the content inside. This content size can be afected by font-size or, in the special case of images, by the with or height set for the <img>. To understand that, add `border: 1px solid black;` to the <img> and <a> tags and `height: 40px;` to the <img> tag.
-
-    - You can see here that the <a> elements are aligning to the middle of the height preset by the line, that has now increased by making the <img> bigger. However, that hasnt change the alignment within their parent element, the <nav>. Also, we might not want to have to increase the
-
-    - See? Both <img> and <a> elements are align to the middle vertically within their boxes. However, they are not centering themselves withing the <nav>. Let's try to apply some paddings and margins. Did that help?
-
-    -
-
-    - As the <a> are inline elements, they can't change their height, and therefore, they are stack to the top of the <nav> and refusing to align to the middle. The <img> is changing it's sizing, but it is also not aligning to the middle. That
-
-Step 2- background-image:
-
-    1.1. Go to the class hero, and add the propertygit
+    - And finalize everzthing by taking away the styling of the <a> tags. Add ` text-decoration: none;` and `color: black;`
