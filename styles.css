@@ -23,7 +23,7 @@ nav {
 }
 
 .nav-left {
-  padding-right: 540px;
+  padding-right: 750px;
 }
 
 span {
@@ -43,3 +43,36 @@ a {
 /* Navbar end */
 
 /* Footer  start*/
+footer {
+  background: #ffff;
+  border-top: 1px solid #cccccc;
+  text-align: center;
+}
+
+footer div {
+  display: inline-block;
+  border: 1px solid #cccccc;
+  padding: 30px;
+  margin: 50px;
+  vertical-align: middle;
+  height: 100px;
+  /* padding: 0 50px; */
+}
+
+footer h3 {
+  /* vertical-align: middle; */
+  /* padding: 0 20px; */
+  /* max-width: 300px; */
+}
+footer div p {
+  /* vertical-align: middle; */
+  /* padding: 0 20px; */
+  width: 300px;
+}
+
+footer div a {
+  /* vertical-align: middle; */
+  /* padding: 0 20px; */
+  text-decoration: none;
+  color: black;
+}
