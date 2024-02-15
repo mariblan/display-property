@@ -7,24 +7,39 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: #ffff;
-  width: 100%;
+  /* width: 100%; */
 }
 
 /* Navbar start */
 header {
-
+  background: #ffff;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px 0;
 }
 nav {
-
+  display: inline;
+  vertical-align: middle;
+  padding: 0 50px;
 }
 
 .nav-left {
-
+  padding-right: 540px;
 }
 
 span {
-
+  display: inline;
+  vertical-align: middle;
+  font-size: 30px;
+  padding: 0 20px;
 }
 a {
-
+  display: inline;
+  vertical-align: middle;
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
 }
+
+/* Navbar end */
+
+/* Footer  start*/

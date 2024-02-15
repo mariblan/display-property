@@ -14,12 +14,9 @@ body {
 header {
   background: #ffff;
   border-bottom: 1px solid #cccccc;
-  padding: 5px 0;
 }
 nav {
   display: inline;
-  vertical-align: middle;
-  padding: 0 50px;
 }
 
 .nav-left {
@@ -28,16 +25,7 @@ nav {
 
 span {
   display: inline;
-  vertical-align: middle;
-  /* border: 1px solid black; */
-  font-size: 30px;
-  padding: 0 20px;
 }
 a {
   display: inline;
-  vertical-align: middle;
-  /* border: 1px solid black; */
-  padding: 0 20px;
-  text-decoration: none;
-  color: black;
 }
