@@ -2,44 +2,62 @@ Inline display:
 
 In this activity we are going to learn how to use the `inline` display. Read carefully the explanation of its characteristics:
 
-    `inline` - The inline property is the default behavior of some text elements (e.g. <a>, <i>, <b>, <em> and <span>). The elements with this type of display will:
+       The inline property is the default behavior of some text elements, e.g. <a>, <i>, <b>, <em> and <span>. The elements with this type of display will:
         - Start on the same line of other inline elements next to them.
         - Not be able to change their with or height from the default one, which will be as hight as the content.
         - Not give a layout to its children elements, only to itself.
 
 Now that we know how the `inline` display works, let's start styling the navigation bar on the page indes.html, with the help of our styles.css.
 
-    - Open now the index.html file and look at the code inside the <header> element.
-    You can see that there is a <nav> element with an <span> and another one with three <a> tags. <nav> elements have as a default the `block` display, so you will see how in the browser, the content inside each <nav> is in a column disposition.
-    Lets change the display for the <nav> in styles.css to `display: inline;`.
+- Step 1:
 
-    - The elements are in a line now, but the text in the <span> is supposed to be a placeholder for a logo. To make it look like one, add a ruleset for the <span> to make it bigger. What property can you use for that?
+  - In index.html, inside the `<header>` there are two `<nav>` elements. By default, `<nav>` elements have the `block` display, but we want both our `<nav>` to display on the same line:
 
-            "The `inline` elements cannot be altered by the height and with properites, but text elements can alter the size of their content, which gives them its default height. Add `font-size: 30px;` to make our <span> bigger."
+    - Go to styles.css and give the `<nav>` ruleset the `display: inline;`.
 
-    - Now that the <span> is bigger, the aligment of both <nav> is off. Add `vertical-align: middle;` to the <nav> ruleset to solve it.
+  - In index.html, inside the `<nav>` elements there are one `<span>` and three `<a>` elements. They are text elements, and have by default the `inline` display. Leave it so.
 
-            "Inline and inline-block elements can use the `vertical-align` property to align to the content within the default height of the line. This height is stablished by the biggest element in the line. In our case, that is the <span>."
+- Step 2:
 
-    - Both <span> and <a> elements are aligned correctly now.There is still no whitespace though. The <span> is stuck to the top, right, left and bottom. To see this correctly, give the <nav>, <span> and <a> elements a border(`border: 1px solid black;`).
+  - The`<span>` is supposed to be a logo, so let's make it bigger. In the ruleset for the element inside the styles.css:
 
-    - We can see the size of the content now, thanks to our border. We can also observe thanks to it, how the <nav> elements are not actually aligned, only the <span> and <a> tags are. In fact, the <span> is overflowing its parent container. To solve the aligment issue, give `vertical-align: middle` to both the <a> and the <span>.
+    - Give it a width and a height. What is the result?
 
-    - Let's also give the <nav> some whitespace so it doesn't look so cluttered. Add some `padding` or `margin` to give whitespaces to the <nav>, <span> and <a> elements. Test different sizes to see what happens (10px, 20px, 30px, etc.). What was the result?
+      `Inline elements aren't affected by height and with, but text elements can alter the size of their content, which gives them its default height.`
 
-            "Inline elements will only be affected by margins and paddings horizontally. The padding is going to be there, as you can see for the space left between the border and the elements. However, the vertical paddings will not affect other elements, as if they weren't there. You can notices that in the fact the elements are not been pushed down by the `padding`or `margin` on the top, and the increase in the size is not making the <header> element bigger."
+    - Give it a `font-size` of 30px.
 
-    - As `height`, `width`, `padding` and `margin` will not help us achieve the whitespace by targeting an inline element, we can instead target its parent, the header. Add `padding: 5px;` to its ruleset.
+- Step 3:
 
-            "The <header> has no display specified in the css, so it is rendering with the default `block` display, as most html do. That means you can alter this element's paddings and/or margins to add that vertical space for the <nav>, <span> and <a> elements not to look so stuck to the top."
+  - Making the `<span>` bigger, caused issues with the aligment of the two `<nav>` elements. In the `<nav>` ruleset:
 
+    - Add the `vertical-align`.
+    - Test the different values of the property to see what fits: top, bottom, middle, basline.
 
-    - Now, that the whitespace is added, let's refractor our code to make the final touche's to our navigation bar. Take away the borders to <nav>, <span> and <a> elements.
+      `"Inline" and "inline-block" elements can use the "vertical-align property" to align to the content within the default height of the line.`
 
-    - Refractor the padding of the <nav> to `padding: 0 50px;`, so the padding is only applied to the sides.
+  - Add the next line of code to the `<nav>`, `<a>` and `<span>` rulesets: `border: 1px solid black;`.
+    - Are all the elements correctly aligned?
+    - Change the vertical alignment of all the `<a>` and `<span>` elements. What about now?
 
-    - Refractor the padding of the <span> and <a> elements to `padding: 0 20px;`.
+- Step 4:
 
-    - Add `padding: 290px;` to the empty ruleset of class selector .nav-left. This is going to help the elements to have the most typical layout for navigation bars with two elements.
+  - Let's also give the `<nav>` some whitespace so it doesn't look so cluttered.
 
-    - And finalize everzthing by taking away the styling of the <a> tags. Add ` text-decoration: none;` and `color: black;`
+    - Add `50px` of `padding`/`margin` to the `<nav>` and the `<a>` elements. What's the result?
+    - Add `20px` of `padding`/`margin` to the `<span>`. What's the result?
+
+      `Inline elements will only be affected by margins and paddings horizontally. The vertical padding is going to be there, as you can see thanks to the elements borders, but it will not affect the elements around it`.
+
+  - As vertical `padding` and `margin` will not affect inline element, we can instead target the `<header>`.
+
+    - Refractor the rule for the `<nav>`, `<span>` and `<a>` paddings/margins, so we aren't applying any vertical margin that will not affect our desing anyway.
+    - Add `5px` of vertical `padding` to the `<header>` ruleset.
+
+      `<header> elements have the "block" display as default. That means you can alter this element's paddings and/or margins to add that vertical space for the <nav>, <span> and <a> elements not to look so stuck to the top.`
+
+  - Let's do the final touches to our navigation bar by laying out both `<nav>` elements on oposite sites of the viewport
+
+    - Add `750px` of `padding` to the empty ruleset of class selector nav-left.
+
+  - Delete the `border` property that we added before from the `<nav>`, `<span>` and `<a>` rulesets.

@@ -28,3 +28,46 @@ span {
 a {
 
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #ffff;
+  width: 100%;
+}
+
+/* Navbar start */
+header {
+  background: #ffff;
+  border-bottom: 1px solid #cccccc;
+  padding: 5px 0;
+}
+nav {
+  display: inline;
+  vertical-align: middle;
+  padding: 0 50px;
+}
+
+.nav-left {
+  padding-right: 750px;
+}
+
+span {
+  display: inline;
+  vertical-align: middle;
+  /* border: 1px solid black; */
+  font-size: 30px;
+  padding: 0 20px;
+}
+a {
+  display: inline;
+  vertical-align: middle;
+  /* border: 1px solid black; */
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
+}
